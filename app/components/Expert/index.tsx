@@ -1,6 +1,6 @@
 'use client';
 import Slider from 'react-slick';
-import React, { Component } from 'react';
+import { Component } from 'react';
 import Image from 'next/image';
 import { Fade } from 'react-awesome-reveal';
 
@@ -38,11 +38,10 @@ export default class MultipleItems extends Component {
             dots: false,
             infinite: true,
             slidesToShow: 3,
-            // centerMode: true,
             slidesToScroll: 1,
             arrows: false,
             autoplay: false,
-            speed: 4000,
+            speed: 1000,
             autoplaySpeed: 2000,
             cssEase: 'linear',
             responsive: [
@@ -61,7 +60,8 @@ export default class MultipleItems extends Component {
                         slidesToShow: 2,
                         slidesToScroll: 1,
                         infinite: true,
-                        dots: false,
+                        arrows: true,
+                        dots: true,
                     },
                 },
                 {
@@ -70,7 +70,8 @@ export default class MultipleItems extends Component {
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         infinite: true,
-                        dots: false,
+                        dots: true,
+                        arrows: true,
                     },
                 },
             ],
