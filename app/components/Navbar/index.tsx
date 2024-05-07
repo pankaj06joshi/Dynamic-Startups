@@ -1,6 +1,6 @@
 "use client"
 import Navbar from './Navbar';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 const Navbarin: React.FC = () => {
     useEffect(() => {
