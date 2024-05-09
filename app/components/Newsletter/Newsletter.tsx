@@ -1,10 +1,32 @@
 "use client"
 import Image from "next/image";
+import { ChangeEvent, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 
 const Newsletter = () => {
+
+    const [contactCreds, setContactCreds] = useState({name: '', email: '', cname: '', cwebsite: '', message: ''});
+
+    const onChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setContactCreds(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    };
+
+    const onSubmit = () => {
+        const { name, email, cname, cwebsite, message } = contactCreds;
+        if(!name){
+            console.log("Please provide name.");
+            return;
+        }
+        if(!email){
+            console.log("Please provide email.");
+            return;
+        }
+        console.log('constactCreds', contactCreds);
+        // integrate API
+    }
+
     return (
-        <div className='relative' id="contact-section">
+        <div className='relative' id='contact-section'>
             <div className='mx-auto max-w-2xl bg-pink br-50 md:max-w-7xl mt-48 rounded-lg'>
                 <div className='grid grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-12 xl:gap-x-8'>
                     {/* COLUMN-1 */}
@@ -23,11 +45,12 @@ const Newsletter = () => {
                                 <Fade direction={'up'} delay={1200} cascade damping={1e-1} triggerOnce={true}>
                                     <div className='relative text-white focus-within:text-white flex flex-row-reverse shadow-fi rounded-full'>
                                         <input
-                                            type='Email address'
-                                            name='q'
+                                            name='name'
                                             className='py-6 sm:py-6 text-sm w-full text-black bg-gray-900 rounded-full pl-4 par-87 focus:outline-none focus:text-black'
                                             placeholder='Name'
                                             autoComplete='off'
+                                            required
+                                            onChange={onChange}
                                         />
                                     </div>
                                 </Fade>
@@ -35,11 +58,12 @@ const Newsletter = () => {
                                 <Fade direction={'up'} delay={1200} cascade damping={1e-1} triggerOnce={true}>
                                     <div className='relative text-white focus-within:text-white flex flex-row-reverse shadow-fi rounded-full'>
                                         <input
-                                            type='Email address'
-                                            name='q'
+                                            name='email'
                                             className='py-6 sm:py-6 text-sm w-full text-black bg-gray-900 rounded-full pl-4 par-87 focus:outline-none focus:text-black mt-5'
                                             placeholder='Email'
                                             autoComplete='off'
+                                            required
+                                            onChange={onChange}
                                         />
                                     </div>
                                 </Fade>
@@ -47,11 +71,11 @@ const Newsletter = () => {
                                 <Fade direction={'up'} delay={1200} cascade damping={1e-1} triggerOnce={true}>
                                     <div className='relative text-white focus-within:text-white flex flex-row-reverse shadow-fi rounded-full'>
                                         <input
-                                            type='Email address'
-                                            name='q'
+                                            name='cname'
                                             className='py-6 sm:py-6 text-sm w-full text-black bg-gray-900 rounded-full pl-4 par-87 focus:outline-none focus:text-black mt-5'
                                             placeholder='Company Name (Optional)'
                                             autoComplete='off'
+                                            onChange={onChange}
                                         />
                                     </div>
                                 </Fade>
@@ -59,11 +83,11 @@ const Newsletter = () => {
                                 <Fade direction={'up'} delay={1200} cascade damping={1e-1} triggerOnce={true}>
                                     <div className='relative text-white focus-within:text-white flex flex-row-reverse shadow-fi rounded-full'>
                                         <input
-                                            type='Email address'
-                                            name='q'
+                                            name='cwebsite'
                                             className='py-6 sm:py-6 text-sm w-full text-black bg-gray-900 rounded-full pl-4 par-87 focus:outline-none focus:text-black mt-5'
                                             placeholder='Company Website(Optional)'
                                             autoComplete='off'
+                                            onChange={onChange}
                                         />
                                     </div>
                                 </Fade>
@@ -71,19 +95,22 @@ const Newsletter = () => {
                                 <Fade direction={'up'} delay={1200} cascade damping={1e-1} triggerOnce={true}>
                                     <div className='relative text-white focus-within:text-white flex flex-row-reverse shadow-fi rounded-full'>
                                         <textarea
-                                            name='q'
+                                            name='message'
                                             className='py-6 sm:py-6 text-sm w-full text-black bg-gray-900 rounded-full pl-4 par-87 focus:outline-none focus:text-black mt-5'
                                             placeholder='Message (Optional)'
                                             autoComplete='off'
+                                            onChange={onChange}
                                         />
                                     </div>
                                 </Fade>
 
                                 <Fade direction={'up'} delay={1200} cascade damping={1e-1} triggerOnce={true}>
-                                <div className='flex align-middle justify-center md:justify-center'>
-                                <button className='text-xl font-medium rounded-full text-white py-5 px-6 bg-yellow lg:px-10 mr-6'>Submit</button>
-                            </div>
-                            </Fade>
+                                    <div className='flex align-middle justify-center md:justify-center'>
+                                        <button className='text-xl font-medium bg-submit rounded-full text-white py-5 px-6 lg:px-10 mt-5' onClick={() => { onSubmit() }} >
+                                            Submit
+                                        </button>
+                                    </div>
+                                </Fade>
                             </div>
                         </div>
                     </div>

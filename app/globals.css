@@ -109,5 +109,6 @@ html:not([data-scroll="0"]) .navbar {
   padding-right: 87px;
 }
 
-
-
+.bg-submit {
+  background-color: #789FFD;
+}
