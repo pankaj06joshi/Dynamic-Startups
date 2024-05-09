@@ -78,7 +78,7 @@ export default class MultipleItems extends Component {
         };
 
         return (
-            <div className='py-10 sm:py-20 bg-darkpink'>
+            <div className='py-10 sm:py-20 bg-darkpink' id="howWeOperate-section">
                 <div className='mx-auto max-w-2xl lg:max-w-7xl sm:py-4 lg:px-8'>
                     <div className='text-center'>
                         <Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>

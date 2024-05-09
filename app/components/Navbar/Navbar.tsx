@@ -16,8 +16,9 @@ interface NavigationItem {
 const navigation: NavigationItem[] = [
     { name: 'Home', href: '#home-section', current: false },
     { name: 'About us', href: '#about-section', current: false },
-    { name: 'Recipe', href: '#cook-section', current: false },
-    { name: 'Gallery', href: '#gallery-section', current: false },
+    { name: 'What we do', href: '#whatWeDo-section', current: false },
+    { name: 'How we operate', href: '#howWeOperate-section', current: false },
+    { name: 'Contact us', href: '#contact-section', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -31,19 +32,19 @@ const Navbar = () => {
     return (
         <Disclosure as='nav' className='navbar'>
             <>
-                <div className='mx-auto max-w-7xl p-3 md:p-6 lg:px-8'>
+                <div className='mx-auto max-w-7xl p-2 md:p-4 lg:px-8'>
                     <div className='relative flex h-12 sm:h-20 items-center'>
                         <div className='flex flex-1 items-center sm:justify-between'>
                             {/* LOGO */}
 
                             <div className='flex sm:hidden flex-shrink-0 items-center border-right'>
-                                <Image src='/images/Logo/Logo.svg' alt='logo' width={36} height={36} />
+                                <Image src='/DynamicStartupsLogo.png' alt='logo' width={36} height={36} />
                                 <Link href='/' className='text-2xl font-semibold text-black ml-4'>
                                     Dynamic Startups
                                 </Link>
                             </div>
                             <div className='hidden sm:flex flex-shrink-0 items-center border-right'>
-                                <Image src='/images/Logo/Logo.svg' alt='logo' width={56} height={56} />
+                                <Image src='/DynamicStartupsLogo.png' alt='logo' width={56} height={56} />
                                 <Link href='/' className='text-2xl font-semibold text-black ml-4'>
                                     Dynamic Startups
                                 </Link>
@@ -68,14 +69,6 @@ const Navbar = () => {
                                     ))}
                                 </div>
                             </div>
-                            <div className='gap-6 hidden lg:flex'>
-                                <div className='flex items-center gap-2'>
-                                    <Image src={'/images/Navbar/phone.svg'} alt='phone-image' width={19} height={19} />
-                                    <p className='text-lg font-medium'>+1(909) 235-9814</p>
-                                </div>
-                                {/* <button className='flex justify-end text-xl font-medium bg-bgpink text-pink py-4 px-4 lg:px-8 navbutton rounded-full hover:text-black'>Sign in</button> */}
-                                <Signindialog />
-                            </div>
                         </div>
 
                         {/* DRAWER FOR MOBILE VIEW */}
@@ -91,7 +84,7 @@ const Navbar = () => {
                         <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
                             <Drawerdata />
                         </Drawer>
-                    </div>
+                    </div>  
                 </div>
             </>
         </Disclosure>

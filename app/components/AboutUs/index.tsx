@@ -2,19 +2,25 @@
 import Image from 'next/image';
 import { Fade } from "react-awesome-reveal";
 
+const AboutUs = () => {
 
-const Cook = () => {
+    const scrollToContact = () => {
+        const contactSection = document.getElementById('contact-section');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
-        <div className='relative' id='cook-section'>
+        <div className='relative' id='about-section'>
             <div className='mx-auto max-w-7xl lg:pt-20 sm:pb-24 px-6'>
                 <div className='absolute right-0 bottom-[-18%] hidden lg:block'>
-                    <Image src={'/images/Cook/side.png'} alt='burger-image' width={463} height={622} />
+                     <Image src={'/images/AboutUs/side.png'} alt='side' width={463} height={622} />
                 </div>
 
                 <div className='grid grid-cols-1 lg:grid-cols-12 my-16 space-x-5'>
                     <div className='col-span-6 flex justify-start'>
-                        <Image src='/images/Cook/about_us.png' alt='nothing' width={636} height={808} />
+                        <Image src='/images/AboutUs/about_us.png' alt='about_us' width={636} height={808} />
                     </div>
 
                     <div className='col-span-6 flex flex-col justify-center'>
@@ -33,7 +39,7 @@ const Cook = () => {
                                 innovative ideas.
                             </p>
                             <div className='flex align-middle justify-center md:justify-start'>
-                                <button className='text-xl font-medium rounded-full text-white py-5 px-6 bg-pink lg:px-10 mr-6'>Learn more</button>
+                                <button className='text-xl font-medium rounded-full text-white py-5 px-6 bg-pink lg:px-10 mr-6' onClick={scrollToContact}>Get Started Today!</button>
                             </div>
                         </Fade>
                     </div>
@@ -43,4 +49,4 @@ const Cook = () => {
     );
 }
 
-export default Cook;
+export default AboutUs;

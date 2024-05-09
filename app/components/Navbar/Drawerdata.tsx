@@ -1,6 +1,4 @@
-import React from "react";
 import Link from "next/link";
-import Contactusform from "./Contactus";
 
 interface NavigationItem {
     name: string;
@@ -11,8 +9,9 @@ interface NavigationItem {
 const navigation: NavigationItem[] = [
     { name: 'Home', href: '#home-section', current: false },
     { name: 'About us', href: '#about-section', current: false },
-    { name: 'Recipe', href: '#cook-section', current: false },
-    { name: 'Gallery', href: '#gallery-section', current: false },
+    { name: 'What we do', href: '#whatWeDo-section', current: false },
+    { name: 'How we operate', href: '#howWeOperate-section', current: false },
+    { name: 'Contact us', href: '#contact-section', current: false },
 ]
 
 
@@ -39,11 +38,6 @@ const Data = () => {
                                 {item.name}
                             </Link>
                         ))}
-                        <div className="mt-4"></div>
-                        <button className='flex justify-center text-base w-full font-medium rounded-full bg-bgpink text-pink py-3 px-4 lg:px-8 navbutton hover:text-white'>Sign in</button>
-                        <button className='flex justify-center text-base w-full font-medium rounded-full bg-transparent border border-bgpink text-pink py-3 px-4 lg:px-8 navbutton hover:text-white hover:bg-pink'>Contact us</button>
-
-                        {/* <Contactusform /> */}
                     </div>
                 </div>
             </div>
