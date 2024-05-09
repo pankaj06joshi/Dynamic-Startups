@@ -4,7 +4,6 @@ import React from 'react';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import Drawer from "./Drawer";
 import Drawerdata from "./Drawerdata";
-import Signindialog from './Signindialog';
 import Image from 'next/image';
 
 interface NavigationItem {

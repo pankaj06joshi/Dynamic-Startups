@@ -91,7 +91,7 @@ const Footer = () => {
             {/* All Rights Reserved */}
 
             <div className='py-10 md:flex items-center justify-between border-t border-t-bordertop'>
-                <h4 className='text-darkgrey text-sm text-center md:text-start font-normal'>@2023 - Dynamic Startup. All Rights Reserved by Dyanmic Startups</h4>
+                <h4 className='text-darkgrey text-sm text-center md:text-start font-normal'>@2023 - Dynamic Startups. All Rights Reserved by Dyanmic Startups</h4>
                 <div className="flex gap-5 mt-5 md:mt-0 justify-center md:justify-start">
                     <h4 className='text-darkgrey text-sm font-normal'><a href="/" target="_blank">Privacy policy</a></h4>
                     <div className="h-5 bg-bordertop w-0.5"></div>

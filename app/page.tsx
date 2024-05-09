@@ -9,7 +9,7 @@ import WhatWeDo from './components/WhatWeDo';
 export default function Home() {
   return (
     <main>
-      {/* <Banner /> */}
+      <Banner />
       <AboutUs />
       <WhatWeDo />
       <Expert />
