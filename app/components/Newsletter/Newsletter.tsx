@@ -62,8 +62,8 @@ const Newsletter = () => {
               </Fade>
 
               <div>
-              <div className="flex">
-                <div className="w-1/2 pr-2">
+              <div className="flex flex-wrap md:flex-nowrap">
+                <div className="w-full pr-1 md:w-1/2">
                   <Fade
                     direction={"up"}
                     delay={1200}
@@ -71,7 +71,7 @@ const Newsletter = () => {
                     damping={1e-1}
                     triggerOnce={true}
                   >
-                    <div className="relative text-white focus-within:text-white flex flex-row-reverse shadow-fi rounded-full">
+                    <div className="relative text-white focus-within:text-white flex flex-row-reverse shadow-fi rounded-full mt-5">
                       <input
                         name="name"
                         className="py-6 sm:py-6 text-sm w-full text-black bg-gray-900 rounded-full pl-4 par-87 focus:outline-none focus:text-black"
@@ -84,7 +84,7 @@ const Newsletter = () => {
                   </Fade>
                 </div>
 
-                <div className="w-1/2 pl-2">
+                <div className="w-full md:w-1/2 ">
                   <Fade
                     direction={"up"}
                     delay={1200}
@@ -95,7 +95,7 @@ const Newsletter = () => {
                     <div className="relative text-white focus-within:text-white flex flex-row-reverse shadow-fi rounded-full">
                       <input
                         name="email"
-                        className="py-6 sm:py-6 text-sm w-full text-black bg-gray-900 rounded-full pl-4 par-87 focus:outline-none focus:text-black"
+                        className="py-6 sm:py-6 text-sm w-full text-black bg-gray-900 rounded-full pl-4 par-87 focus:outline-none focus:text-black mt-5"
                         placeholder="Email"
                         autoComplete="off"
                         required
@@ -106,8 +106,8 @@ const Newsletter = () => {
                 </div>
                 </div>
 
-                <div className="flex">
-                  <div className="w-1/2 pr-2">
+                <div className="flex flex-wrap md:flex-nowrap">
+                <div className="w-full pr-1 md:w-1/2 ">
                     <Fade
                       direction={"up"}
                       delay={1200}
@@ -126,7 +126,7 @@ const Newsletter = () => {
                       </div>
                     </Fade>
                   </div>
-                  <div className="w-1/2 pl-2">
+                  <div className="w-full md:w-1/2">
                     <Fade
                       direction={"up"}
                       delay={1200}
