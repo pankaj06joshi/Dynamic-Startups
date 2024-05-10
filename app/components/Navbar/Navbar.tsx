@@ -31,7 +31,7 @@ const Navbar = () => {
     return (
         <Disclosure as='nav' className='navbar'>
             <>
-                <div className='mx-auto max-w-7xl p-2 md:p-4 lg:px-8'>
+                <div className='mx-auto max-w-7xl p-1 lg:px-8'>
                     <div className='relative flex h-12 sm:h-20 items-center'>
                         <div className='flex flex-1 items-center sm:justify-between'>
                             {/* LOGO */}
